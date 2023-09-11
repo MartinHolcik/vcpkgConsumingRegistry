@@ -2,15 +2,19 @@
 //
 
 #include "vcpkgConsumingRegistry.h"
-//#include "out/build/linux-debug-vcpkg/vcpkg_installed/x64-linux/include/lely/util/bits.h"
-#include "bits.h"
+#include "lely/can/buf.h"
 
 using namespace std;
 
 int main()
 {
-	clz8(10);
-	cout << "Hello CMake." << endl;
+	can_buf myCanBuff;
+	can_buf *ptrMyCanBuff = &myCanBuff;
+	size_t size = 0;
+
+	size = can_buf_reserve(ptrMyCanBuff, 3200);
+
+	cout << "Import of lely-canopen successfull, can buffer of size " << size << " reserved\n" << endl;
 
 	return 0;
 }
