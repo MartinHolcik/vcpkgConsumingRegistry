@@ -1,8 +1,0 @@
-Package: lely-canopen
-Version: 2.3.1
-Architecture: x64-linux
-Multi-Arch: same
-Abi: 0b649a18e5596f9f17e9d8497c72e87c447ca0c4754eed7f3d08a962205e4070
-Description: The Lely core libraries are a collection of C and C++ libraries and tools, providing hih-performance I/O and sensor/actuator control for robotics and IoT applications.
-Status: install ok installed
-

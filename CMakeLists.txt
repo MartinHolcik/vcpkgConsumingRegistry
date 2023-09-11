@@ -4,15 +4,24 @@ cmake_minimum_required (VERSION 3.8)
 
 project ("vcpkgConsumingRegistry")
 
-# Set CMAKE_PREFIX_PATH to include vcpkg's installed packages
-# set(CMAKE_PREFIX_PATH "${CMAKE_PREFIX_PATH};/home/holm/.vs/vcpkgConsumingRegistry/build/linux-ARMv7-debug-vcpkg/vcpkg_installed/x64-linux/")
-# set(CMAKE_GENERATOR_PLATFORM "x64")
-
-#LELY CANopen master library form our custom registries
-find_package("lely-canopen" REQUIRED)
+# Lely-CANopen master library (from our custom registries)
+# find_package("lely-canopen" REQUIRED)
 
 # Add source to this project's executable.
 add_executable (vcpkgConsumingRegistry "vcpkgConsumingRegistry.cpp" "vcpkgConsumingRegistry.h")
 
-# TODO: Add tests and install targets if needed.
-target_link_libraries(vcpkgConsumingRegistry PRIVATE lely-canopen::lely-canopen)
+# Lely-CANopen master library (from our custom registries)
+target_include_directories(vcpkgConsumingRegistry PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/out/build/linux-debug-vcpkg/vcpkg_installed/x64-linux/include)
+
+target_link_directories(vcpkgConsumingRegistry PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/out/build/linux-debug-vcpkg/vcpkg_installed/x64-linux/lib/)
+
+target_link_libraries(vcpkgConsumingRegistry
+	PUBLIC lely-coapp.a
+	PUBLIC lely-co.a
+	PUBLIC lely-io2.a
+	PUBLIC lely-can.a
+	PUBLIC lely-ev.a
+	PUBLIC lely-tap.a
+	PUBLIC lely-util.a
+	PUBLIC lely-libc.a
+)
