@@ -1,0 +1,13 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/../include
+
+Name: liblely-coapp
+Description: C++ CANopen application library
+URL: https://gitlab.com/lely_industries/lely-core
+Version: 2.4.0
+
+Libs: "-L${libdir}" -llely-coapp
+Requires: liblely-libc >= 2.4.0 liblely-io2 >= 2.4.0 liblely-co >= 2.4.0
+Cflags: "-I${includedir}"

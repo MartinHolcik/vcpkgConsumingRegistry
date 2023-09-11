@@ -1,0 +1,13 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/../include
+
+Name: liblely-tap
+Description: Lely Test Anything Protocol (TAP) library
+URL: https://gitlab.com/lely_industries/lely-core
+Version: 2.4.0
+
+Libs: "-L${libdir}" -llely-tap
+Requires: liblely-libc >= 2.4.0
+Cflags: "-I${includedir}"

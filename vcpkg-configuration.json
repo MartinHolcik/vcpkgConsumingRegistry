@@ -1,0 +1,11 @@
+{
+  "default-registry": null,
+  "registries": [
+    {
+      "kind": "git",
+      "repository": "https://github.com/MartinHolcik/vcpkg_registry",
+      "baseline": "142c1841e1078a8056ed1660fbe4e7c89049a4c5",
+      "packages": [ "lely-canopen" ]
+    }
+  ]
+}

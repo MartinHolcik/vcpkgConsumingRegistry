@@ -1,0 +1,32 @@
+{
+  "ActiveTargetSystem": "WSL: Ubuntu-20.04",
+  "DevContainersInfoBarHidden": true,
+  "MRUPresetsPerTargetSystem": {
+    "Local Machine": {
+      "configure": "x64-debug"
+    }
+  },
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\Ubuntu-20.04\\build\\linux-debug",
+      "out\\Ubuntu-20.04\\install\\linux-debug",
+      "out\\Ubuntu-20.04\\build\\linux-debug-vcpkg",
+      "out\\Ubuntu-20.04\\install\\linux-debug-vcpkg",
+      "out\\Ubuntu-20.04\\build\\linux-ARMv7-debug-vcpkg",
+      "out\\Ubuntu-20.04\\install\\linux-ARMv7-debug-vcpkg"
+    ],
+    "WSL: Ubuntu-20.04": [
+      "out\\Ubuntu-20.04\\build\\linux-debug",
+      "out\\Ubuntu-20.04\\install\\linux-debug",
+      "out\\Ubuntu-20.04\\build\\linux-debug-vcpkg",
+      "out\\Ubuntu-20.04\\install\\linux-debug-vcpkg",
+      "out\\Ubuntu-20.04\\build\\linux-ARMv7-debug-vcpkg",
+      "out\\Ubuntu-20.04\\install\\linux-ARMv7-debug-vcpkg"
+    ]
+  },
+  "ExpandedNodes": [
+    ""
+  ],
+  "SelectedNode": "\\C:\\_GIT_personal\\vcpkgConsumingRegistry",
+  "PreviewInSolutionExplorer": false
+}
